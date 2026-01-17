@@ -72,7 +72,7 @@ timeline
     Ep 10,000 : Mechanical Skill : Learning to Jump
     Ep 50,000 : Strategic Depth : Kiting & Cutting Corners
 ```
-## 👨‍💻 Author
+## Author
 
 **Jonathon Moore**
 
