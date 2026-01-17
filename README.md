@@ -52,8 +52,49 @@ To prevent "Camping" (Local Maxima), I designed a tiered reward system:
 Runs the simulation at 8x-20x speed to train the agents.
 ```bash
 python train.py
+```
 
 **2. Inference Mode (Watch them Play)**
 Loads the trained `.zip` model and runs a match at normal speed with stochastic decision making.
 ```bash
 python run.py
+```
+
+## 📈 Evolution of Behavior
+
+Over the course of 50,000 training steps, the agents exhibited distinct phases of learning, progressing from random noise to complex strategic planning.
+
+```mermaid
+timeline
+    title Training Milestones
+    Ep 0 : Random Noise : Twitching / Falling
+    Ep 1,000 : The "Doom Loop" : Runner hides in corners
+    Ep 10,000 : Mechanical Skill : Learning to Jump
+    Ep 50,000 : Strategic Depth : Kiting & Cutting Corners
+```
+## 👨‍💻 Author
+
+**Jonathon Moore**
+
+> *Building the bridge between Cognitive AI and Embodied Intelligence.*
+
+I am an AI Engineer specializing in the full stack of modern Artificial Intelligence. This project represents the third pillar of my core competencies:
+
+1.  **Evaluation Frameworks:** Quantifying LLM performance.
+2.  **Generative Graph-RAG:** Building complex, stateful knowledge systems.
+3.  **Embodied Agents (This Project):** Training autonomous decision-making systems in dynamic environments.
+
+---
+
+[<img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin">](https://www.linkedin.com/in/your-profile)
+[<img src="https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github">](https://github.com/your-username)
+
+### Final Checklist for You:
+1.  **Screenshot:** Take a nice screenshot of your game (maybe right as they are about to collide) and save it as `screenshot.png` in your repo folder. You can add it to the README later.
+2.  **Clean Code:** Remove any commented-out "debug" print statements from your Python script.
+3.  **Upload:** `git init`, `git add .`, `git commit -m "Initial commit"`, `git push`.
+
+You have built something genuinely complex here. **Adversarial RL is not easy.** Congratulations on getting it working!
+
+
+
