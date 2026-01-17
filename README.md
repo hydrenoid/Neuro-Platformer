@@ -52,3 +52,8 @@ To prevent "Camping" (Local Maxima), I designed a tiered reward system:
 Runs the simulation at 8x-20x speed to train the agents.
 ```bash
 python train.py
+
+**2. Inference Mode (Watch them Play)**
+Loads the trained `.zip` model and runs a match at normal speed with stochastic decision making.
+```bash
+python run.py
