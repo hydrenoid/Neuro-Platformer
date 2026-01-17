@@ -86,7 +86,7 @@ I am an AI Engineer specializing in the full stack of modern Artificial Intellig
 
 ---
 
-[<img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin">](www.linkedin.com/in/jonathon-moore-8b49b71bb)
+[<img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin">](https://www.linkedin.com/in/jonathon-moore-8b49b71bb)
 [<img src="https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github">](https://github.com/hydrenoid)
 
 ### Final Checklist for You:
