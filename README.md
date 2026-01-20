@@ -1,10 +1,8 @@
-
+# Starting model
+https://github.com/user-attachments/assets/fee90a4d-8ba3-4e5b-9afa-f70db6fed255
 
 # Trained model
 https://github.com/user-attachments/assets/1436879a-5766-4df3-87ba-13d0ecf9362e
-
-# Starting model
-https://github.com/user-attachments/assets/fee90a4d-8ba3-4e5b-9afa-f70db6fed255
 
 # Neuro-Tag: Adversarial Multi-Agent Reinforcement Learning
 
