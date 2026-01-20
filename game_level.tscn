@@ -1,0 +1,157 @@
+[gd_scene load_steps=6 format=3 uid="uid://1h47ucalmi5t"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_tgwd6"]
+[ext_resource type="Script" path="res://ai_controller.gd" id="2_4up72"]
+[ext_resource type="Script" path="res://addons/godot_rl_agents/sync.gd" id="3_ch828"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k751a"]
+size = Vector2(120, 5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cs6nf"]
+radius = 8.0
+
+[node name="GameLevel" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(930, 258)
+rotation = 1.57357
+scale = Vector2(2.554, 1.1897)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("RectangleShape2D_k751a")
+
+[node name="ColorRect" type="ColorRect" parent="Floor/CollisionShape2D"]
+offset_left = -60.0
+offset_top = -2.5
+offset_right = 60.0
+offset_bottom = 2.5
+
+[node name="Floor2" type="StaticBody2D" parent="."]
+position = Vector2(676, 404)
+scale = Vector2(17.2819, 0.966965)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
+shape = SubResource("RectangleShape2D_k751a")
+
+[node name="ColorRect" type="ColorRect" parent="Floor2/CollisionShape2D"]
+offset_left = -60.0
+offset_top = -2.5
+offset_right = 60.0
+offset_bottom = 2.5
+
+[node name="Floor4" type="StaticBody2D" parent="."]
+position = Vector2(9, 269)
+rotation = 1.56961
+scale = Vector2(2.36124, 0.976817)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor4"]
+shape = SubResource("RectangleShape2D_k751a")
+
+[node name="ColorRect" type="ColorRect" parent="Floor4/CollisionShape2D"]
+offset_left = -60.0
+offset_top = -2.5
+offset_right = 60.0
+offset_bottom = 2.5
+
+[node name="Floor9" type="StaticBody2D" parent="."]
+position = Vector2(468, 330)
+scale = Vector2(5.84128, 0.9837)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor9"]
+shape = SubResource("RectangleShape2D_k751a")
+
+[node name="ColorRect" type="ColorRect" parent="Floor9/CollisionShape2D"]
+offset_left = -60.0
+offset_top = -2.5
+offset_right = 60.0
+offset_bottom = 2.5
+
+[node name="Chaser" type="CharacterBody2D" parent="."]
+position = Vector2(78, 379)
+script = ExtResource("1_tgwd6")
+role = 1
+opponent_path = NodePath("../Runner")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chaser"]
+shape = SubResource("CapsuleShape2D_cs6nf")
+
+[node name="ColorRect" type="ColorRect" parent="Chaser"]
+offset_left = -8.0
+offset_top = -15.0
+offset_right = 8.0
+offset_bottom = 15.0
+color = Color(1, 0, 0, 1)
+
+[node name="AIController" type="Node2D" parent="Chaser"]
+script = ExtResource("2_4up72")
+
+[node name="Sensors" type="Node2D" parent="Chaser"]
+
+[node name="Down" type="RayCast2D" parent="Chaser/Sensors"]
+
+[node name="Right" type="RayCast2D" parent="Chaser/Sensors"]
+target_position = Vector2(50, 0)
+
+[node name="Up" type="RayCast2D" parent="Chaser/Sensors"]
+target_position = Vector2(0, -50)
+
+[node name="Left" type="RayCast2D" parent="Chaser/Sensors"]
+target_position = Vector2(-50, 0)
+
+[node name="BottomRight" type="RayCast2D" parent="Chaser/Sensors"]
+target_position = Vector2(50, 50)
+
+[node name="TopRight" type="RayCast2D" parent="Chaser/Sensors"]
+target_position = Vector2(50, -50)
+
+[node name="TopLeft" type="RayCast2D" parent="Chaser/Sensors"]
+target_position = Vector2(-50, -50)
+
+[node name="BottomLeft" type="RayCast2D" parent="Chaser/Sensors"]
+target_position = Vector2(-50, 50)
+
+[node name="Runner" type="CharacterBody2D" parent="."]
+position = Vector2(831, 371)
+script = ExtResource("1_tgwd6")
+opponent_path = NodePath("../Chaser")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Runner"]
+shape = SubResource("CapsuleShape2D_cs6nf")
+
+[node name="ColorRect" type="ColorRect" parent="Runner"]
+offset_left = -8.0
+offset_top = -15.0
+offset_right = 8.0
+offset_bottom = 15.0
+color = Color(0, 0.556798, 0.894937, 1)
+
+[node name="AIController" type="Node2D" parent="Runner"]
+script = ExtResource("2_4up72")
+
+[node name="Sensors" type="Node2D" parent="Runner"]
+
+[node name="Down" type="RayCast2D" parent="Runner/Sensors"]
+
+[node name="Right" type="RayCast2D" parent="Runner/Sensors"]
+target_position = Vector2(50, 0)
+
+[node name="Up" type="RayCast2D" parent="Runner/Sensors"]
+target_position = Vector2(0, -50)
+
+[node name="Left" type="RayCast2D" parent="Runner/Sensors"]
+target_position = Vector2(-50, 0)
+
+[node name="BottomRight" type="RayCast2D" parent="Runner/Sensors"]
+target_position = Vector2(50, 50)
+
+[node name="TopRight" type="RayCast2D" parent="Runner/Sensors"]
+target_position = Vector2(50, -50)
+
+[node name="TopLeft" type="RayCast2D" parent="Runner/Sensors"]
+target_position = Vector2(-50, -50)
+
+[node name="BottomLeft" type="RayCast2D" parent="Runner/Sensors"]
+target_position = Vector2(-50, 50)
+
+[node name="Sync" type="Node" parent="."]
+script = ExtResource("3_ch828")
