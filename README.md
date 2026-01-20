@@ -1,4 +1,4 @@
-# 🏃‍♂️ Neuro-Tag: Adversarial Multi-Agent Reinforcement Learning
+# Neuro-Tag: Adversarial Multi-Agent Reinforcement Learning
 
 > **An AI "Fight Club" inside Godot 4.** Two neural networks compete in a high-speed game of Tag, evolving complex evasion strategies from scratch.
 
@@ -6,14 +6,14 @@
 ![Python](https://img.shields.io/badge/Python-3.10-3776ab?logo=python&logoColor=white)
 ![PPO](https://img.shields.io/badge/Algorithm-PPO-FFD43B)
 
-## 🧠 Project Overview
+## Project Overview
 Unlike traditional Game AI, which relies on scripted Finite State Machines (FSM), these agents are **Tabula Rasa**—they started with zero knowledge of physics or game rules. 
 
 Through **Adversarial Self-Play**, the agents engaged in an evolutionary arms race:
 1.  **The Chaser (Red):** Learned to cut corners and predict trajectories to minimize distance.
 2.  **The Runner (Blue):** Learned to utilize map geometry, "juke" opponents, and exploit verticality to survive.
 
-## ⚙️ Technical Architecture
+## Technical Architecture
 
 ### The "Shared Brain" Approach
 To optimize training efficiency, I used a single PPO (Proximal Policy Optimization) model to control *both* agents simultaneously.
@@ -34,7 +34,7 @@ To prevent "Camping" (Local Maxima), I designed a tiered reward system:
 * **Camping Penalty:** -0.05 per frame if velocity is near zero.
 * **Terminal Jackpot:** +/- 10.0 for a successful Tag or successful Evasion (Timer expiry).
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 * Godot 4.x
@@ -60,7 +60,7 @@ Loads the trained `.zip` model and runs a match at normal speed with stochastic 
 python run.py
 ```
 
-## 📈 Evolution of Behavior
+## Evolution of Behavior
 
 Over the course of 50,000 training steps, the agents exhibited distinct phases of learning, progressing from random noise to complex strategic planning.
 
