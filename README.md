@@ -1,3 +1,11 @@
+
+
+# Trained model
+https://github.com/user-attachments/assets/1436879a-5766-4df3-87ba-13d0ecf9362e
+
+# Starting model
+https://github.com/user-attachments/assets/fee90a4d-8ba3-4e5b-9afa-f70db6fed255
+
 # Neuro-Tag: Adversarial Multi-Agent Reinforcement Learning
 
 > **An AI "Fight Club" inside Godot 4.** Two neural networks compete in a high-speed game of Tag, evolving complex evasion strategies from scratch.
@@ -88,13 +96,3 @@ I am an AI Engineer specializing in the full stack of modern Artificial Intellig
 
 [<img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin">](https://www.linkedin.com/in/jonathon-moore-8b49b71bb)
 [<img src="https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github">](https://github.com/hydrenoid)
-
-### Final Checklist for You:
-1.  **Screenshot:** Take a nice screenshot of your game (maybe right as they are about to collide) and save it as `screenshot.png` in your repo folder. You can add it to the README later.
-2.  **Clean Code:** Remove any commented-out "debug" print statements from your Python script.
-3.  **Upload:** `git init`, `git add .`, `git commit -m "Initial commit"`, `git push`.
-
-You have built something genuinely complex here. **Adversarial RL is not easy.** Congratulations on getting it working!
-
-
-
